@@ -11,19 +11,19 @@ This repository demonstrates the same `Todo` use case in separate Git branches.
 
 ## Current branch
 
-`main` contains the Layered Architecture example:
+`hexagonal-architecture` contains the Hexagonal Architecture example:
 
-- Endpoint: `POST /layered/todos`
-- Endpoint: `GET /layered/todos`
-- Package root: `com.awwad.example.architecture.layered`
+- Endpoint: `POST /hexagonal/todos`
+- Endpoint: `GET /hexagonal/todos`
+- Package root: `com.awwad.example.architecture.hexagonal`
 
 ## Run and test
 
 Use Maven Wrapper from project root.
 
 ```powershell
-.\mvnw.cmd test
-.\mvnw.cmd spring-boot:run
+.\\mvnw.cmd test
+.\\mvnw.cmd spring-boot:run
 ```
 
 ## Create/switch branches
@@ -34,4 +34,3 @@ git switch hexagonal-architecture
 git switch onion-architecture
 git switch clean-architecture
 ```
-
