@@ -11,11 +11,12 @@ This repository demonstrates the same `Todo` use case in separate Git branches.
 
 ## Current branch
 
-`main` contains the Layered Architecture example:
+`clean-architecture` contains the Clean Architecture example:
 
-- Endpoint: `POST /layered/todos`
-- Endpoint: `GET /layered/todos`
-- Package root: `com.awwad.example.architecture.layered`
+- Endpoint: `POST /clean/todos`
+- Endpoint: `GET /clean/todos`
+- Package root: `com.awwad.example.architecture.clean`
+- Layers: `core` (entities, use-case boundaries, interactors, gateway interfaces) → `dataprovider` (gateway impls) → `entrypoint` (web controllers)
 
 ## Run and test
 
