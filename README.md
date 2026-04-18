@@ -11,11 +11,12 @@ This repository demonstrates the same `Todo` use case in separate Git branches.
 
 ## Current branch
 
-`main` contains the Layered Architecture example:
+`onion-architecture` contains the Onion Architecture example:
 
-- Endpoint: `POST /layered/todos`
-- Endpoint: `GET /layered/todos`
-- Package root: `com.awwad.example.architecture.layered`
+- Endpoint: `POST /onion/todos`
+- Endpoint: `GET /onion/todos`
+- Package root: `com.awwad.example.architecture.onion`
+- Layers (innermost → outermost): `domain` → `application` → `infrastructure` + `presentation`
 
 ## Run and test
 
