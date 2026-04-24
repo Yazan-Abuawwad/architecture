@@ -17,6 +17,26 @@ This repository demonstrates the same `Todo` use case in separate Git branches.
 - Endpoint: `GET /layered/todos`
 - Package root: `com.awwad.example.architecture.layered`
 
+## Canonical structure for each architecture branch
+
+Use this package layout under `com.awwad.example.architecture.<pattern>`:
+
+```text
+domain/
+  entity/
+  repository/
+
+application/
+  usecase/
+
+infrastructure/
+  database/
+  security/
+
+presentation/
+  controller/
+```
+
 ## Run and test
 
 Use Maven Wrapper from project root.
@@ -34,4 +54,3 @@ git switch hexagonal-architecture
 git switch onion-architecture
 git switch clean-architecture
 ```
-
