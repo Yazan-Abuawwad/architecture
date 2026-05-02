@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.Map;
 
-@RestControllerAdvice(basePackageClasses = TodoController.class)
+@RestControllerAdvice(basePackageClasses = {TodoController.class, ShoppingCartController.class})
 public class HexagonalApiExceptionHandler {
 
     @ExceptionHandler(IllegalArgumentException.class)

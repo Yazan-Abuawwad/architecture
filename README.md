@@ -15,7 +15,17 @@ This repository demonstrates the same `Todo` use case in separate Git branches.
 
 - Endpoint: `POST /hexagonal/todos`
 - Endpoint: `GET /hexagonal/todos`
+- Endpoint: `POST /hexagonal/cart/items`
+- Endpoint: `GET /hexagonal/cart`
 - Package root: `com.awwad.example.architecture.hexagonal`
+
+Shopping cart flow in this branch: `adapter/in/web/ShoppingCartController` -> `application/service/ShoppingCartApplicationService` -> outbound ports (`LoadProductPort`, `ReserveStockPort`, `LoadCartPort`, `SaveCartPort`) -> in-memory adapters.
+
+In-memory catalog products are preloaded in `hexagonal/adapter/out/persistence/InMemoryProductCatalogAdapter`:
+
+- `1` -> Laptop, `1000.00`, `10%` discount, stock `5`
+- `2` -> Mouse, `25.00`, no discount, stock `20`
+- `3` -> Keyboard, `75.00`, `5%` discount, stock `10`
 
 ## Run and test
 
