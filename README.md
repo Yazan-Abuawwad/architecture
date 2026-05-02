@@ -15,8 +15,18 @@ This repository demonstrates the same `Todo` use case in separate Git branches.
 
 - Endpoint: `POST /onion/todos`
 - Endpoint: `GET /onion/todos`
+- Endpoint: `POST /onion/cart/items`
+- Endpoint: `GET /onion/cart`
 - Package root: `com.awwad.example.architecture.onion`
 - Layers (innermost → outermost): `domain` → `application` → `infrastructure` + `presentation`
+
+Shopping cart flow in this branch: `presentation/ShoppingCartController` -> `application/ShoppingCartApplicationService` -> domain repositories (`ProductRepository`, `StockRepository`, `CartRepository`) -> in-memory infrastructure adapters.
+
+In-memory catalog products are preloaded in `onion/infrastructure/persistence/InMemoryProductRepository`:
+
+- `1` -> Laptop, `1000.00`, `10%` discount, stock `5`
+- `2` -> Mouse, `25.00`, no discount, stock `20`
+- `3` -> Keyboard, `75.00`, `5%` discount, stock `10`
 
 ## Run and test
 
