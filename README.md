@@ -15,7 +15,17 @@ This repository demonstrates the same `Todo` use case in separate Git branches.
 
 - Endpoint: `POST /layered/todos`
 - Endpoint: `GET /layered/todos`
+- Endpoint: `POST /layered/cart/items`
+- Endpoint: `GET /layered/cart`
 - Package root: `com.awwad.example.architecture.layered`
+
+Shopping cart flow in this branch: `ShoppingCartController` -> `ShoppingCartService` -> `ProductRepository` + `CartRepository`.
+
+In-memory catalog products are preloaded in `InMemoryProductRepository`:
+
+- `1` -> Laptop, `1000.00`, `10%` discount, stock `5`
+- `2` -> Mouse, `25.00`, no discount, stock `20`
+- `3` -> Keyboard, `75.00`, `5%` discount, stock `10`
 
 ## Canonical structure for each architecture branch
 
